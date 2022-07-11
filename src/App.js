@@ -6,7 +6,8 @@ function App() {
 	const [input, setInput] = useState('');
 	const [boxes, setBoxes] = useState([]);
 
-	const currentInput = () => input;
+	const getCurrentInput = () => input;
+	const getCurrentBoxes = () => boxes;
 
 	const setBoxInput = (input) => {
 		setInput(input);
@@ -21,8 +22,9 @@ function App() {
 			<Input
 				setInput={setBoxInput}
 				addBox={addBox}
-				currentInput={currentInput}
+				currentInput={getCurrentInput}
 			/>
+			<Box currentBoxes={getCurrentBoxes} />
 		</div>
 	);
 }
