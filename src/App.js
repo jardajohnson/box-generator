@@ -7,7 +7,6 @@ function App() {
 	const [boxes, setBoxes] = useState([]);
 
 	const getCurrentInput = () => input;
-	const getCurrentBoxes = () => boxes;
 
 	const setBoxInput = (input) => {
 		setInput(input);
@@ -18,13 +17,13 @@ function App() {
 	};
 
 	return (
-		<div className='flex justify-start gap-5'>
+		<div className='flex justify-center gap-5 flex-wrap'>
 			<Input
 				setInput={setBoxInput}
 				addBox={addBox}
 				currentInput={getCurrentInput}
 			/>
-			<Box currentBoxes={getCurrentBoxes} />
+			<Box currentBoxes={boxes} />
 		</div>
 	);
 }

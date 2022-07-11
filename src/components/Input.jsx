@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-
-const Input = ({ setInput, addBox, currentInput }) => {
+const Input = ({ setInput, addBox }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		
+		addBox(e.target.color.value);
 	};
 
 	return (
